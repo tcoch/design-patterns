@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-lg-6">
+            Here's what's happening when calling the <b>base</b> service:
+            <hr>
+            {{ base }}
+        </div>
+        <div class="col-lg-6">
+            Here's what's happening when calling the <b>decorated</b> service:
+            <hr>
+            {{ decorated }}
+        </div>
+    </div>
+
+
+{% endblock %}
