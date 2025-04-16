@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-lg-6">
+            Normally, you can get two instances of an object:
+            <hr>
+            <ul>
+                <li>First instance attribute value is: {{ notSingletonInstanceA.attribute }}</li>
+                <li>Second instance attribute value is: {{ notSingletonInstanceB.attribute }}</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            But with the <code>singleton pattern</code>, you can only get <b>one instance</b>, <i>via</i> the static <code>getInstance()</code> method:
+            <hr>
+            <ul>
+                <li>First instance attribute value is: {{ singletonInstanceA.attribute }}</li>
+                <li>'Second instance' attribute value is: {{ singletonInstanceB.attribute }}</li>
+            </ul>
+            There's really only one instance, and the last action to set the <code>attribute</code> value was to set it to <code>singletonInstanceB</code>.
+        </div>
+    </div>
+
+
+{% endblock %}
