@@ -15,11 +15,11 @@ Using PHP Symfony, this repository aims to demonstrate some programming patterns
 
 ### Pattern #1: Decorator
 
-...
+Add some logic to an existing class, without changing the initial class (e.g. add some logging before an action is performed).
 
-### Pattern #2
+### Pattern #2: Singleton
 
-...
+Make sure you have one and only one instance of a class (e.g. only one connection to a database).
 
 ## License
 
