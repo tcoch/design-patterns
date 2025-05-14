@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Tcoch • Exploring design patterns{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container-fluid">
+            {% block body %}
+            <p>
+                Patterns:
+            </p>
+            <ul>
+                <li class="fw-bold">Decorator</li>
+                <ul>
+                    <li><a href={{ path('decorator_doSomething') }}>doSomething</a></li>
+                    <li><a href={{ path('decorator_doAnotherThing') }}>doAnotherThing</a></li>
+                </ul>
+                <li class="fw-bold">Singleton</li>
+                <ul>
+                    <li>Not using singleton</li>
+                    <ul>
+                        <li><a href={{ path('singleton_notUsed_differentDefinitionOfInstance') }}>With two different instances (same object, different values for attributes)</a></li>
+                        <li><a href={{ path('singleton_notUsed_sameDefinitionOfInstance') }}>With two identical instances (same object, same values for attributes)</a></li>
+                    </ul>
+                    <li><a href={{ path('singleton_used') }}>Using singleton</a></li>
+                </ul>
+                <li class="fw-bold">Builder</li>
+                <ul>
+                    <li><a href={{ path('builder_withBuildPattern') }}>Using builder pattern</a></li>
+                    <li><a href={{ path('builder_withoutBuildPattern') }}>Using a candid constructor</a></li>
+                </ul>
+                <li><i>More coming soon ...</i></li>
+            </ul>
+            {% endblock %}
+        </div>
+        <p>
+            Full code available at :
+            <a target="_blanck" href="https://github.com/tcoch/design-patterns">https://github.com/tcoch/design-patterns</a>
+        </p>
+    </body>
+</html>
